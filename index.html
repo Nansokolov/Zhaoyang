@@ -25,13 +25,11 @@
         <h2>Zhaoyang Rui</h2>
         <h3>Student Engineer in Toronto</h3>
 
-        <button type="button" class="active" onclick="scrollFunc(this, 'home')">HOME</button>
-        <button type="button" onclick="scrollFunc(this, 'aboutme')">ABOUT</button>
-        <button type="button" onclick="scrollFunc(this, 'portfolio')">PORTFOLIO</button>
-        <button type="button" onclick="scrollFunc(this, '')">SKILLS</button>
-        <button type="button" onclick="scrollFunc(this, '')">EXPERIENCE</button>
-        <button type="button" onclick="scrollFunc(this, '')">EDUCATION</button>
-        <button type="button" onclick="scrollFunc(this, '')">CONTACT</button>
+        <button type="button" id="buttonHome" class="active" onclick="scrollFunc(this, 'home')">HOME</button>
+        <button type="button" id="buttonAbut" onclick="scrollFunc(this, 'aboutme')">ABOUT</button>
+        <button type="button" id="buttonPortfolio" onclick="scrollFunc(this, 'portfolio')">PORTFOLIO</button>
+        <button type="button" id="buttonExperience" onclick="scrollFunc(this, 'experience')">EXPERIENCE</button>
+        <button type="button" id="buttonContact" onclick="scrollFunc(this, 'contact')">CONTACT</button>
 
     </div>
     <div class="flexible mainBody" id="myBody">
@@ -75,39 +73,8 @@
         <section id="portfolio" style="height: auto;">
             <div class="bodyWText">
                 <span>Portfolio</span>
-                <h2>What do I do?</h3>
-                <!-- <div class="flexibleContainer" style="gap: 10px;">
-                    <div class="flexible margin-20">
-                        <h3>Project 1</h3>
-                        <div class="box">
-                            <img src="project1 Logo.jpg" alt="">
-                            <a href="displayProjects/project1.html" class="showme">Show me</a>
-                        </div>
-                    </div>
-                    <div class="flexible margin-20">
-                        <h3>Project 2</h3>
-                        <div class="box">
-                            <img src="project2 Logo.jpg" alt="">
-                            <a href="displayProjects/project2.html" class="showme">Show me</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="flexibleContainer" style="gap: 10px;">
-                    <div class="flexible margin-20">
-                        <h3>Project 3</h3>
-                        <div class="box">
-                            <img src="project3 Logo.jpg" alt="">
-                            <a href="displayProjects/project3.html" class="showme">Show me</a>
-                        </div>
-                    </div>
-                    <div class="flexible margin-20">
-                        <h3>Project 4</h3>
-                        <div class="box">
-                            <img src="project4 Logo.jpg" alt="">
-                            <a href="displayProjects/project4.html" class="showme">Show me</a>
-                        </div>
-                    </div>
-                </div> -->
+                <h2>What do I do?</h2>
+                <h3>MIE243</h3>
                 <div class="flexibleContainer" style="gap: 10px;">
                     <div class="flexible margin-20">
                         <h3>Project 1</h3>
@@ -124,6 +91,7 @@
                         </div>
                     </div>
                 </div>
+                <h3>Other Course Projects</h3>
                 <div class="flexibleContainer" style="gap: 10px;">
                     <div class="flexible margin-20">
                         <h3>Project 3</h3>
@@ -134,10 +102,39 @@
                     </div>
                     <div class="flexible margin-20"></div>
                 </div>
+                <h3>Extea-Curricular Activity</h3>
+
             </div>
         </section>
-        <section>Do we need skills?</section>
+        <section id="experience" style="height: auto;">
+            <div class="bodyWText">
+                <span>My Experience</span>
+                <h2>What did I work on?</h2>
+                <p>Hi, my name is Zhaoyang Rui, I am a second-year mechanical engineering student at the University of Toronto. I outline my career path by pursuing higher education and working in a research team in the field of aerospace engineering in the future. I claim my strengths as problem analysis and lifetime learning. I found that these qualities are two of the main strengths that insist on helping to achieve the career path I built for the future. Lifetime learning is required for pursuing higher education as the world is changing every day and new technology is appearing with time. I managed to do lifetime learning. While technic-based work often requires problem analysis it is necessary to analyze the problem first to find the solution. Also, I take part in the University of Toronto aerospace design team which aids in accomplishing my planned career path.</p>
+            </div>
+        </section>
+        <section id="contact" style="height: auto;">
+            <div class="bodyWText">
+                <span>Contact Me</span>
+                <h2>How to reach me?</h2>
+                <p>like this</p>
+            </div>
     </div>
 </body>
+
+<script>
+    
+    let pos = 0;
+    document.addEventListener("scroll", (event) => {
+    pos = (document.documentElement.scrollTop || document.body.scrollTop);
+    if( pos >= 0 && pos <= 773){
+        setClassActive(document.querySelector("#buttonHome"))
+    }else if(pos >= 773 && pos <= 1545){
+        setClassActive(document.querySelector("#buttonAbut"))
+    }else if( pos >= 1545 && pos <= 1900){
+        setClassActive(document.querySelector("#buttonPortfolio"))
+    }
+    });
+</script>
 
 </html>
