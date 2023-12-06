@@ -28,7 +28,7 @@ body{
 .sideBar button{
     background-color: #f2f3f7;
     border: none;
-    padding: 5px;
+    padding: 20px 5px;
     cursor: pointer;
     border-bottom: 1px solid #f2f3f7;
 }
