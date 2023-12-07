@@ -166,6 +166,21 @@ body{
 .bodyProject p{
     margin: 20px calc(10% + 20px);
 }
+.bodyProject a{
+    margin: 20px calc(10% + 20px);
+    color: black;
+    padding: 10px 30px;
+    border-radius: 10px;
+    width: fit-content;
+    border: 1px solid lightgrey;
+}
+.bodyProject a:hover{
+    background-color: #2c98f0;
+    color: white
+}
+.bodyProject h4{
+    margin: 5px calc(10% + 20px);
+}
 .bodyProject img{
     width: 80%;
     padding: 20px;
@@ -175,4 +190,8 @@ body{
     border-radius: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+#experience h2 {
+    text-align: center;
 }
